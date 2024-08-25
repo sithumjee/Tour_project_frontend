@@ -1,0 +1,99 @@
+.footer {
+  background-color: #333; /* Darker background */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px; /* Increased gap */
+  padding: 40px 5vw; /* Adjusted padding */
+  margin-top: 100px;
+  color: #f0f0f0; /* Lighter text color */
+  border-top: 5px solid #ffcc00; /* Top border for emphasis */
+}
+
+.footer-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr; /* Adjusted column ratios */
+  gap: 60px; /* Reduced gap */
+}
+
+.footer-content-left,
+.footer-content-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Changed to flex-start */
+  gap: 15px; /* Reduced gap */
+}
+
+.footer-content img {
+  width: 24px; /* Set a fixed width for social icons */
+  height: 24px; /* Set a fixed height for social icons */
+}
+
+.footer-content-middle ul,
+.footer-content-right ul {
+  list-style: none;
+  padding: 0; /* Remove default padding */
+}
+
+.footer-content-middle li {
+  margin-bottom: 30px;
+}
+
+.footer h2 {
+  color: wheat;
+}
+
+.footer-content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 10px; /* Added gap for better spacing */
+}
+
+.footer-content-right li {
+  margin-bottom: 20px;
+}
+
+.footer-content-right input {
+  padding: 5px; /* Padding for input field */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  margin-right: 10px;
+}
+
+.footer-content-right button {
+  padding: 10px 20px; /* Padding for button */
+  background-color: #ffcc00; /* Button background color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.footer hr {
+  width: 100%;
+  height: 1px; /* Thinner line */
+  background-color: #444; /* Darker line color */
+  margin: 20px 0;
+}
+
+.footer-copyright {
+  text-align: center; /* Centered copyright text */
+  font-size: 12px; /* Smaller font size */
+}
+
+/*=========================media===========================*/
+
+@media (max-width: 750px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Reduced gap for mobile */
+    width: 100%;
+  }
+
+  .footer-copyright {
+    font-size: 10px; /* Smaller font size for mobile */
+  }
+}

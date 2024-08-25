@@ -1,0 +1,83 @@
+/* ManageUsers Component Styles */
+
+.manage-users-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ccc;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.user-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.usercardinner {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.detail-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.user-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.removeUser {
+  background-color: #f44336c8;
+  width: 70%;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+.removeUser:hover {
+  background-color: #f44336da;
+}
+
+.remove-button-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 550px) {
+  .manage-users-container {
+    width: 300px;
+    font-size: 12px;
+  }
+
+  .user-photo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .removeUser {
+    padding: 5px;
+    font-size: 13px;
+  }
+
+  .detail-label option {
+    font-size: 12px;
+  }
+}

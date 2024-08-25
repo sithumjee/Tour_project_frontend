@@ -1,0 +1,63 @@
+.about-us {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+  background-color: rgb(218, 218, 222);
+}
+
+.about-us h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: blue;
+}
+
+.about-us p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.aboutContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between columns */
+}
+
+.aboutContent > div {
+  flex: 1;
+  min-width: 250px;
+  background-color: #e0f7fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth zoom */
+}
+
+.aboutContent > div:hover {
+  transform: scale(1.05); /* Zoom in on hover */
+}
+
+.aboutContent h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.aboutContent ul {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.aboutContent li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .aboutContent {
+    flex-direction: column; /* Stack vertically on smaller screens */
+  }
+
+  .aboutContent > div {
+    min-width: auto; /* Remove minimum width constraint */
+  }
+}

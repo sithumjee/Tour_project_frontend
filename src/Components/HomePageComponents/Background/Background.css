@@ -1,0 +1,137 @@
+.background-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+  top: 0;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Center vertically */
+  justify-content: space-between; /* Space between the description and buttons */
+  width: 80%; /* Set a width for the content */
+  z-index: 1;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 8px;
+  height: 30vw;
+}
+
+.overlay-content h1 {
+  width: 50vw;
+  font-size: 50px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 30px;
+  margin-left: 40px; /* Add space between the paragraph and buttons */
+}
+
+.button-group button {
+  padding: 20px 30px;
+  font-size: 1em;
+  border: none;
+  border-radius: 45px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  width: 20vw;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.button-group button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.play-pause-button {
+  background: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.play-pause-button img {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .button-group {
+    gap: 20px;
+  }
+
+  .button-group button {
+    padding: 10px 20px;
+  }
+
+  .overlay-content h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 850px) {
+  .button-group {
+    gap: 10px;
+  }
+
+  .button-group button {
+    padding: 5px 10px;
+  }
+
+  .overlay-content h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 850px) {
+  .button-group {
+    gap: 30px;
+  }
+
+  .background-container {
+    height: 60vh;
+  }
+
+  .button-group button {
+    padding: 5px 10px;
+    width: 150px;
+    margin-left: 10px;
+  }
+
+  .overlay-content h1 {
+    display: none;
+  }
+
+  .overlay-content {
+    height: 40vh;
+  }
+}

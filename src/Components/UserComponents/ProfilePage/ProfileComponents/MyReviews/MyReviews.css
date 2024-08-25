@@ -1,0 +1,50 @@
+.review-list {
+  margin: 20px 0;
+  padding: 0;
+  margin-left: 7vw;
+  max-width: 900px;
+}
+
+.review {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #ccc;
+  position: relative;
+}
+
+.review p {
+  margin: 5px 0;
+}
+
+.review .review-text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.review .review-rating {
+  font-size: 14px;
+  color: #140aa0;
+}
+
+.review .review-user {
+  font-size: 12px;
+  color: #555;
+}
+
+.review button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #ff4d4d;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.review button:hover {
+  background-color: #ff1a1a;
+}

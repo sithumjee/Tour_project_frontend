@@ -1,0 +1,14 @@
+.profile-page {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  /* Add additional styles for the sidebar */
+}
+
+.profile-content {
+  flex: 1;
+  padding: 20px;
+  /* Add additional styles for the profile content */
+}

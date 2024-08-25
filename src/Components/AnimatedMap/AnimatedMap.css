@@ -1,0 +1,157 @@
+.animated-map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 200px;
+  flex-direction: column;
+}
+
+.worldmap {
+  width: 100%;
+  background-color: #101224;
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+  border-radius: 15px;
+}
+
+.worldmap img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.pin {
+  position: absolute;
+  background: #4362f8;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+}
+
+.pin::before {
+  content: "";
+  position: absolute;
+  background: #4362f8;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: pulse 1.3s ease-in-out infinite;
+}
+
+.country-name {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border-radius: 3em;
+  padding: 0.3em 0.6em;
+  font-size: 0.9em;
+}
+
+.usa {
+  top: 50%;
+  left: 21%;
+  animation-delay: 0.1s; /* Delay for staggered effect */
+}
+
+.france {
+  top: 50%;
+  left: 45%;
+  animation-delay: 0.2s;
+}
+
+.srilanka {
+  top: 65%;
+  left: 69%;
+  animation-delay: 0.3s;
+}
+
+.canada {
+  top: 43%;
+  left: 20%;
+  animation-delay: 0.4s;
+}
+
+.brazil {
+  top: 70%;
+  left: 30%;
+  animation-delay: 0.5s;
+}
+
+.russia {
+  top: 30%;
+  left: 75%;
+}
+
+.england {
+  top: 42%;
+  left: 46%;
+}
+
+.japan {
+  top: 50%;
+  left: 85%;
+  animation-delay: 0.7s;
+}
+
+.australia {
+  top: 78%;
+  left: 80%;
+  animation-delay: 0.8s;
+}
+
+@keyframes pulse {
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.5);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+@media (max-width: 1200px) {
+  .animated-map {
+    padding: 30px 150px;
+  }
+
+  .country-name {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .animated-map {
+    padding: 0;
+  }
+
+  .pin {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  .country-name {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 700px) {
+  .pin {
+    width: 0.4rem;
+    height: 0.4rem;
+  }
+}

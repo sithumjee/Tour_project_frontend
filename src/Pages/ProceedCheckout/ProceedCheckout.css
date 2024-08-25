@@ -1,0 +1,30 @@
+.checkout {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 50vh; /* Full height of the viewport */
+  text-align: center; /* Center text */
+}
+
+.orderDetails {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 30px 40px;
+}
+
+.home-button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.home-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}

@@ -1,0 +1,220 @@
+/* src/components/TourDisplay/TourDisplay.css */
+
+.tour-detail {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tour-detail h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: rgb(12, 12, 108);
+}
+
+.tour-detail hr {
+}
+
+.tour-image-cover {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.priceRating {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #e1e6eb;
+  align-items: center;
+}
+
+.tour-detail p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.priceP {
+  color: red;
+  font-size: 20px;
+}
+
+.tour-detail span {
+  font-weight: bold;
+  color: black;
+}
+
+.tour-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  margin-top: 50px;
+  cursor: pointer;
+  overflow-y: auto;
+}
+
+.tour-images::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.tour-images {
+  scrollbar-width: none;
+}
+
+.tour-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.get-tour {
+  padding: 20px 100px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 25px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.get-tour:hover {
+  background-color: #0056b3;
+}
+
+.get-tour a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.guiddiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 20px;
+}
+
+.guide-photo {
+  width: 150px;
+}
+
+/* Expandable Image Overlay Styles */
+
+.expanded-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.expanded-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.close-button {
+  position: absolute;
+  top: 0px;
+  right: 100px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.nav-symbol {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-symbol.prev {
+  left: 20px;
+  width: 40px;
+}
+
+.nav-symbol.next {
+  right: 20px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Space above the table */
+  margin-bottom: 40px;
+}
+
+th,
+td {
+  border: 1px solid #c8c6c6; /* Light gray border */
+  padding: 12px; /* Padding inside cells */
+  text-align: left; /* Align text to the left */
+}
+
+th {
+  background-color: #e0dede; /* Light gray background for header */
+  font-weight: bold; /* Bold text for header */
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Zebra striping for even rows */
+}
+
+tr:hover {
+  background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+@media (max-width: 750px) {
+  table {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  .close-button {
+    width: 20px;
+  }
+
+  .guide-photo {
+    width: 30px;
+  }
+
+  .get-tour {
+    font-size: 18px;
+    padding: 10px 50px;
+  }
+
+  .tour-detail h1 {
+    font-size: 30px;
+  }
+
+  .tour-detail p {
+    font-size: 15px;
+  }
+}
