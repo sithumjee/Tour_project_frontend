@@ -3,7 +3,7 @@ import { TourContext } from "../../../../../Context/TourContext";
 import "./MyReviews.css";
 
 const MyReviews = () => {
-  const { ReviewsList = [], user ,tourList} = useContext(TourContext); // Default to empty array if undefined
+  const { ReviewsList = [], user, tourList = [] } = useContext(TourContext); // Default to empty array if undefined
 
   // Ensure user is defined before filtering reviews
   const userReviews = user
@@ -24,9 +24,11 @@ const MyReviews = () => {
               <p className="review-text">{review.review}</p>
               <p className="review-rating">Rating: {review.rating}</p>
               <p className="review-user">By: {user?.name}</p>
-              {tour && (
+              {tour ? (
                 <p className="review-tour">Tour Name: {tour.name}</p>
-              )} {/* Display tour name if found */}
+              ) : (
+                <p className="review-tour">Tour not found</p>
+              )}
             </div>
           );
         })
