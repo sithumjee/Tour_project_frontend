@@ -3,12 +3,12 @@ import { TourContext } from "../../../../../Context/TourContext";
 import "./MyReviews.css";
 
 const MyReviews = () => {
-  const { ReviewsList, user, tourList } = useContext(TourContext);
+  const { ReviewsList = [], user } = useContext(TourContext); // Default to empty array if undefined
 
   // Ensure user is defined before filtering reviews
-  const userReviews = ReviewsList.filter(
-    (review) => review.user._id === user._id
-  );
+  const userReviews = user
+    ? ReviewsList.filter((review) => review.user?._id === user._id)
+    : [];
 
   return (
     <div className="review-list">
@@ -23,11 +23,10 @@ const MyReviews = () => {
             <div key={review._id} className="review">
               <p className="review-text">{review.review}</p>
               <p className="review-rating">Rating: {review.rating}</p>
-              <p className="review-user">By: {user.name}</p>
+              <p className="review-user">By: {user?.name}</p>
               {tour && (
                 <p className="review-tour">Tour Name: {tour.name}</p>
-              )}{" "}
-              {/* Display tour name if found */}
+              )} {/* Display tour name if found */}
             </div>
           );
         })
