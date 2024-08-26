@@ -4,7 +4,7 @@ import axios from "axios";
 import "./ManageReviews.css";
 
 const ManageReviews = () => {
-  const { ReviewsList, userList, url, token, setReviewList } =
+  const { ReviewsList = [], userList = [], url, token, setReviewList } =
     useContext(TourContext);
   const [selectedUser, setSelectedUser] = useState("");
 
@@ -16,12 +16,12 @@ const ManageReviews = () => {
 
   // Get unique users from reviews using usernames
   const uniqueUsers = [
-    ...new Set(ReviewsList.map((review) => userMap[review.user._id])),
+    ...new Set(ReviewsList.map((review) => review.user ? userMap[review.user._id] : null).filter(Boolean)),
   ];
 
   // Filter reviews based on selected user
   const filteredReviews = selectedUser
-    ? ReviewsList.filter((review) => userMap[review.user._id] === selectedUser)
+    ? ReviewsList.filter((review) => review.user && userMap[review.user._id] === selectedUser)
     : ReviewsList;
 
   const handleDelete = async (reviewId) => {
@@ -37,7 +37,7 @@ const ManageReviews = () => {
     } catch (err) {
       console.error(
         "Error deleting review:",
-        err.response.data.message || "An error occurred"
+        err.response?.data?.message || "An error occurred"
       );
     }
   };
@@ -67,7 +67,7 @@ const ManageReviews = () => {
           <div key={review._id} className="review">
             <p className="review-text">{review.review}</p>
             <p className="review-rating">Rating: {review.rating}</p>
-            <p className="review-user">By: {userMap[review.user._id]}</p>
+            <p className="review-user">By: {review.user ? userMap[review.user._id] : "Unknown"}</p>
             <button onClick={() => handleDelete(review._id)}>Delete</button>
           </div>
         ))
