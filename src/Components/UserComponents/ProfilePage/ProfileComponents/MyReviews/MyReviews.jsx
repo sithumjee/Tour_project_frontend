@@ -3,7 +3,7 @@ import { TourContext } from "../../../../../Context/TourContext";
 import "./MyReviews.css";
 
 const MyReviews = () => {
-  const { ReviewsList = [], user } = useContext(TourContext); // Default to empty array if undefined
+  const { ReviewsList = [], user ,tourList} = useContext(TourContext); // Default to empty array if undefined
 
   // Ensure user is defined before filtering reviews
   const userReviews = user
